@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="450.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.edu.sumdu.j2se.sorokolitevhen.taskmanager.controllers.AddEditController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label text="Name" />
+            <TextField fx:id="name" />
+            <CheckBox fx:id="active" mnemonicParsing="false" onAction="#changName" text="Activate">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="repit" mnemonicParsing="false" onAction="#repited" text="Repited">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#btnAdd" prefHeight="18.0" prefWidth="75.0" text="OK">
+               <opaqueInsets>
+                  <Insets top="50.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#Close" text="Main menu">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="timeVbox" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label text="Time" />
+            <DatePicker fx:id="time" editable="false" />
+            <Label text="hour" />
+            <Spinner fx:id="timeH" max="24" min="0" />
+            <Label layoutX="20.0" layoutY="52.0" text="min" />
+            <Spinner fx:id="timeM" max="60" min="0" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="startVbox" layoutX="205.0" layoutY="10.0" prefHeight="492.0" prefWidth="100.0">
+         <children>
+            <Label text="Start" />
+            <DatePicker fx:id="start" editable="false" />
+            <Label text="hour" />
+            <Spinner fx:id="startH" max="24" min="0" />
+            <Label layoutX="20.0" layoutY="52.0" text="min" />
+            <Spinner fx:id="startM" max="60" min="0" />
+            <Label text="interval" />
+            <TextField fx:id="interval" onKeyTyped="#nums" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="endVbox" layoutX="150.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label text="End" />
+            <DatePicker fx:id="end" editable="false" />
+            <Label text="hour" />
+            <Spinner fx:id="endH" max="24" min="0" />
+            <Label layoutX="20.0" layoutY="52.0" text="min" />
+            <Spinner fx:id="endM" max="60" min="0" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets right="10.0" />
+   </padding>
+</HBox>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.edu.sumdu.j2se.sorokolitevhen.taskmanager.controllers.MainContorller">
+    <children>
+        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="180.0" spacing="20.0">
+            <children>
+                <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="25.0" prefWidth="100.0" text="Add Edit Task" />
+                <Button fx:id="btnRemove" mnemonicParsing="false" onAction="#buttonPressed" text="Remove Task" />
+                <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#buttonPressed" text="Edit Task" ></Button>
+                <Button fx:id="btnLoad" mnemonicParsing="false" onAction="#btnLoad" text="Load Tasks" />
+                <Button mnemonicParsing="false" onAction="#btnCalendar" text="Calendar" />
+                <Button mnemonicParsing="false" onAction="#btnExit" text="Exit program" />
+            </children>
+        </HBox>
+        <AnchorPane prefHeight="211.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+            <children>
+                <ListView fx:id="taskListView" layoutX="2.0" layoutY="-7.0" prefHeight="221.0" prefWidth="593.0" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </children>
+        </AnchorPane>
+    </children>
+    <opaqueInsets>
+        <Insets top="1.0" />
+    </opaqueInsets>
+</VBox>
